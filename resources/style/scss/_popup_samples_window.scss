@@ -1,0 +1,41 @@
+@import "popup_samples_colors";
+
+
+window {
+  //background-image: none;
+  background-color: $base-bg;
+  color: $light-base-bg;
+}
+
+box.custom-widget-style
+{
+  label
+  {
+    font-size: 32px;
+  }
+  background-color: $base-border-color;
+}
+
+box#overlay-popup-box
+{
+  color: $light-base-bg;
+  box-shadow: 0 0 20px $gtk_text_color;
+
+  border: 3px solid $base-border-color;
+  background-color: $base-bg;
+  border-radius: 20px;
+  button
+  {
+    color: $base-fg;
+    border: 3px solid $base-border-color;
+    border-radius: 50px;
+    padding: 10px 10px 10px 10px;
+    background-size: 100% 100%;
+    font-size: 1.1em;
+  }
+}
+
+.transparent_background{
+  background-color: rgba(0, 0, 0, 0.55);
+  background-image: none;
+}

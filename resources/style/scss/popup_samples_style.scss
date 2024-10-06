@@ -1,0 +1,9 @@
+@import "popup_samples_colors";
+@import "popup_samples_button";
+@import "popup_samples_window";
+
+#root-application-window{
+  //background-image: none;
+  background-color: $base-bg;
+  color: $light-base-bg;
+}

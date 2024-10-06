@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/resource_path">
+        <file preprocess="xml-stripblanks">resources/popup_samples.glade</file>
+        <file preprocess="xml-stripblanks">resources/two_button_popup.glade</file>
+        <file preprocess="xml-stripblanks">resources/one_button_acknowledge.glade</file>
+        <file preprocess="xml-stripblanks">resources/validated_entry.glade</file>
+        <file>resources/style/popup_samples_style.css</file>
+    </gresource>
+</gresources>

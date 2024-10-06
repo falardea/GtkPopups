@@ -1,0 +1,11 @@
+/*
+ * Created by french on 2/3/24.
+*/
+#ifndef POPUP_SAMPLES_VERSION_H
+#define POPUP_SAMPLES_VERSION_H
+
+#define project_VERSION_MAJOR @GtkPopups_VERSION_MAJOR@
+#define project_VERSION_MINOR @GtkPopups_VERSION_MINOR@
+#define project_VERSION_PATCH @GtkPopups_VERSION_PATCH@
+
+#endif  /* POPUP_SAMPLES_VERSION_H */
