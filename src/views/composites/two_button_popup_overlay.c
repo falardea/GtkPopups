@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2024 Deka Research and Development. All rights reserved.
- * Created by rfalardeau on 5/30/2024. 
+ * Created by rfalardeau on 5/30/2024.
 */
 #include <gtk/gtk.h>
 #include "app_globals.h"

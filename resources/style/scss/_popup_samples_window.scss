@@ -18,24 +18,32 @@ box.custom-widget-style
 
 box#overlay-popup-box
 {
-  color: $light-base-bg;
-  box-shadow: 0 0 20px $gtk_text_color;
+  color: $gtk_bg_color;
+  box-shadow: 0 0 20px $base-bg;
 
   border: 3px solid $base-border-color;
   background-color: $base-bg;
-  border-radius: 20px;
+  border-radius: 10px;
   button
   {
-    color: $base-fg;
+    //color: $base-fg;
     border: 3px solid $base-border-color;
-    border-radius: 50px;
+    border-radius: 25px;
     padding: 10px 10px 10px 10px;
-    background-size: 100% 100%;
+    //background-size: 100% 100%;
     font-size: 1.1em;
   }
 }
 
+.error
+{
+  color: red;
+  border-color: red;
+  background-color: pink;
+  background-image: none;
+}
+
 .transparent_background{
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.15);
   background-image: none;
 }

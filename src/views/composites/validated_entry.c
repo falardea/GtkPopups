@@ -48,10 +48,12 @@ void on_btn_validate_and_submit_clicked(__attribute__((unused)) GtkButton *butto
    if (valid_input)
    {
       // What if the "validation_and_submit_callback" destroys "self"?
+      gtk_style_context_remove_class(gtk_widget_get_style_context(GTK_WIDGET(self->entry_to_validate)), "error");
       gtk_container_remove(GTK_CONTAINER(gtk_widget_get_parent(GTK_WIDGET(self))), GTK_WIDGET(self));
    }
    else
    {
+      gtk_style_context_add_class(gtk_widget_get_style_context(GTK_WIDGET(self->entry_to_validate)), "error");
       logging_llprintf(LOGLEVEL_DEBUG, "%s: Invalid input", __func__ );
    }
 }

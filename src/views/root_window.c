@@ -8,6 +8,10 @@
 #include "composites/two_button_popup_overlay.h"
 #include "composites/one_button_acknowledge.h"
 #include "composites/validated_entry.h"
+#include "composites/screen_cleaner.h"
+#include "composites/asynchronous_scanner.h"
+
+#define DO_TWO 0
 
 static const char *MSG_OUT_CURSOR_NAME = "msgOutCursor";
 static GtkTextMark *msgOutCursor;
@@ -52,10 +56,12 @@ void on_do_something_button_clicked(__attribute__((unused)) GtkButton *button, g
       print_log_level_msgout(LOGLEVEL_INFO, "nothing to say?");
    }
 
+#if DO_TWO
    GtkWidget *popup = two_button_popup_new("This is a test", "This is a test of the two button popup and flavoring it on "
                                                              "creation", "You Rock!", "You Still Rock!", (TwoButtonResponseCallback_T)temp_callback);
    gtk_overlay_add_overlay(GTK_OVERLAY(wdgts->w_home_page_overlay), popup);
    gtk_widget_show_all(popup);
+#endif
 }
 
 void on_btn_info_ack_clicked(__attribute__((unused)) GtkButton *button, gpointer *user_data)
@@ -104,7 +110,7 @@ gboolean validation_callback(gchar *text_to_validate)
    logging_llprintf(LOGLEVEL_DEBUG, "%s", __func__);
    app_widget_ref_struct *wdgts = get_app_widgets_pointer();
 
-   if (strlen(text_to_validate) > 0)
+   if (strlen(text_to_validate) > 0 && strcmp(text_to_validate, "Abracadabra") == 0)
    {
       gtk_label_set_label(GTK_LABEL(wdgts->w_lbl_input_from_entry_popup), text_to_validate);
       return TRUE;
@@ -128,20 +134,21 @@ void on_show_validated_entry_popup_clicked(__attribute__((unused)) GtkButton *bu
 }
 
 
+void on_btn_screen_cleaner_clicked(__attribute__((unused)) GtkButton *button, gpointer *user_data)
+{
+   app_widget_ref_struct *wdgts = (app_widget_ref_struct *) user_data;
+   GtkWidget *cleaner = screen_cleaner_new(12);
+   gtk_overlay_add_overlay(GTK_OVERLAY(wdgts->w_home_page_overlay), cleaner);
+   gtk_widget_show(cleaner);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+void on_btn_async_scanner_clicked(__attribute__((unused)) GtkButton *button, gpointer *user_data)
+{
+   app_widget_ref_struct *wdgts = (app_widget_ref_struct *) user_data;
+   GtkWidget *scanner = asynchronous_scanner_new(NULL);
+   gtk_overlay_add_overlay(GTK_OVERLAY(wdgts->w_home_page_overlay), scanner);
+   gtk_widget_show(scanner);
+}
 
 
 

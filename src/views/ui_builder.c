@@ -33,7 +33,10 @@ app_widget_ref_struct *app_builder(void) {
    appWidgetsT->w_home_page_overlay = GTK_WIDGET(gtk_builder_get_object(builder, "home_page_overlay"));
    appWidgetsT->w_btn_acknowledge = GTK_WIDGET(gtk_builder_get_object(builder, "btn_acknowledge"));
    appWidgetsT->w_config_option_on_off = GTK_WIDGET(gtk_builder_get_object(builder, "config_option_on_off"));
+
    appWidgetsT->w_btn_get_config_type_bool = GTK_WIDGET(gtk_builder_get_object(builder, "btn_get_config_type_bool"));
+   appWidgetsT->w_btn_screen_cleaner = GTK_WIDGET(gtk_builder_get_object(builder, "btn_screen_cleaner"));
+   appWidgetsT->w_btn_async_scanner = GTK_WIDGET(gtk_builder_get_object(builder, "btn_async_scanner"));
 
    appWidgetsT->w_lbl_input_from_entry_popup = GTK_WIDGET(gtk_builder_get_object(builder, "lbl_input_from_entry_popup"));
    bind_widgets_src_active_tar_sensitive(GTK_WIDGET(appWidgetsT->w_config_option_on_off), GTK_WIDGET(appWidgetsT->w_btn_get_config_type_bool));

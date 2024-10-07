@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2024 Deka Research and Development. All rights reserved.
- * Created by rfalardeau on 5/30/2024. 
+ * Created by rfalardeau on 5/30/2024.
 */
 #ifndef TWO_BUTTON_POPUP_OVERLAY_H__
 #define TWO_BUTTON_POPUP_OVERLAY_H__

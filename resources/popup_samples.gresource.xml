@@ -5,6 +5,8 @@
         <file preprocess="xml-stripblanks">resources/two_button_popup.glade</file>
         <file preprocess="xml-stripblanks">resources/one_button_acknowledge.glade</file>
         <file preprocess="xml-stripblanks">resources/validated_entry.glade</file>
+        <file preprocess="xml-stripblanks">resources/screen_cleaner.glade</file>
+        <file preprocess="xml-stripblanks">resources/asynchronous_scanner.glade</file>
         <file>resources/style/popup_samples_style.css</file>
     </gresource>
 </gresources>

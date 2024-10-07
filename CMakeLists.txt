@@ -66,28 +66,32 @@ add_custom_command(
 add_custom_target(popup_samples-resource DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${GRESOURCE_C})
 
 set(MY_SOURCES
-    src/main.c
-    src/app_globals.h
-    src/utils/parse_args.c
-    src/utils/parse_args.h
-    src/utils/logging.c
-    src/utils/logging.h
-    src/utils/sys_interface.c
-    src/utils/sys_interface.h
-    src/interfaces/app_interface.c
-    src/interfaces/app_interface.h
-    src/views/ui_builder.c
-    src/views/ui_builder.h
-    src/views/css_styler.c
-    src/views/css_styler.h
-    src/views/root_window.c
-    src/views/root_window.h
-    src/views/composites/two_button_popup_overlay.c
-    src/views/composites/two_button_popup_overlay.h
-    src/views/composites/one_button_acknowledge.c
-    src/views/composites/one_button_acknowledge.h
-    src/views/composites/validated_entry.c
-    src/views/composites/validated_entry.h
+      src/main.c
+      src/app_globals.h
+      src/utils/parse_args.c
+      src/utils/parse_args.h
+      src/utils/logging.c
+      src/utils/logging.h
+      src/utils/sys_interface.c
+      src/utils/sys_interface.h
+      src/interfaces/app_interface.c
+      src/interfaces/app_interface.h
+      src/views/ui_builder.c
+      src/views/ui_builder.h
+      src/views/css_styler.c
+      src/views/css_styler.h
+      src/views/root_window.c
+      src/views/root_window.h
+      src/views/composites/two_button_popup_overlay.c
+      src/views/composites/two_button_popup_overlay.h
+      src/views/composites/one_button_acknowledge.c
+      src/views/composites/one_button_acknowledge.h
+      src/views/composites/validated_entry.c
+      src/views/composites/validated_entry.h
+      src/views/composites/asynchronous_scanner.c
+      src/views/composites/asynchronous_scanner.h
+      src/views/composites/screen_cleaner.c
+      src/views/composites/screen_cleaner.h
 )
 
 include_directories(${PROJECT_SOURCE_DIR})

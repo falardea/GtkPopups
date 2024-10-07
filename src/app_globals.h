@@ -31,6 +31,8 @@ typedef struct {
    GtkWidget   *w_config_option_on_off;
    GtkWidget   *w_btn_get_config_type_bool;
    GtkWidget   *w_lbl_input_from_entry_popup;
+   GtkWidget   *w_btn_screen_cleaner;
+   GtkWidget   *w_btn_async_scanner;
 } app_widget_ref_struct;
 
 extern app_widget_ref_struct *g_app_widget_refs;
