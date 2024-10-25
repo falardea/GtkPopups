@@ -82,9 +82,9 @@ void on_btn_get_config_type_bool_clicked(__attribute__((unused)) GtkButton *butt
    gchar text_entered_by_user[2048];
    gchar build_a_msg_out[2048];
 
-   gboolean use_entered_text = (gtk_entry_buffer_get_length(gtk_entry_get_buffer(GTK_ENTRY(wdgts->w_say_something_entry))) > 0);
+   gboolean user_entered_text = (gtk_entry_buffer_get_length(gtk_entry_get_buffer(GTK_ENTRY(wdgts->w_say_something_entry))) > 0);
 
-   if (use_entered_text){
+   if (user_entered_text){
       snprintf(text_entered_by_user, sizeof(text_entered_by_user), "%s",
                gtk_entry_get_text(GTK_ENTRY(wdgts->w_say_something_entry)));
       print_log_level_msgout(LOGLEVEL_INFO, "%s", gtk_entry_get_text(GTK_ENTRY(wdgts->w_say_something_entry)));
@@ -95,7 +95,7 @@ void on_btn_get_config_type_bool_clicked(__attribute__((unused)) GtkButton *butt
 
    snprintf(build_a_msg_out, sizeof(build_a_msg_out), "%s%s%s\n%s%s",
             "This is a build-a-message popup, taking some 'inputs' from the parent, such as:\n",
-            "The user entered ", use_entered_text ? text_entered_by_user : "nothing in the text input\n",
+            "The user entered ", user_entered_text ? text_entered_by_user : "nothing in the text input\n",
             "And this popup was enabled because the Enable Config Menu is ", gtk_switch_get_active(GTK_SWITCH(wdgts->w_config_option_on_off)) ? "enabled": "somehow disabled");
    GtkWidget *popup = two_button_popup_new("Turn it up to 11!", build_a_msg_out,
                                            "Rock on!", "That's a nope!",
@@ -125,14 +125,13 @@ void on_show_validated_entry_popup_clicked(__attribute__((unused)) GtkButton *bu
                                           "also be a tree, with configuration items, configured by a boxed-type structure "
                                           "for application-ui state, may a run-state object too...",
                                           "Validate-able Input >>>",
-                                          "SOME-DEFAULT-ENTRY-TEXT",
+                                          "A magician says what?",
                                           "modify/override from default",
                                           "Validate Input", "Cancel",
                                           (ValidateFormCallback_T)validation_callback);
    gtk_overlay_add_overlay(GTK_OVERLAY(wdgts->w_home_page_overlay), popup);
    gtk_widget_show_all(popup);
 }
-
 
 void on_btn_screen_cleaner_clicked(__attribute__((unused)) GtkButton *button, gpointer *user_data)
 {
@@ -150,7 +149,10 @@ void on_btn_async_scanner_clicked(__attribute__((unused)) GtkButton *button, gpo
    gtk_widget_show(scanner);
 }
 
-
+void on_btn_show_password_prompt_clicked(__attribute__((unused)) GtkButton *button, gpointer *user_data)
+{
+   logging_llprintf(LOGLEVEL_DEBUG, "%s", "CHECKPOINT");
+}
 
 /////////////////////////////////////////////////////////
 void set_msgout_buffer(const char *msgout)

@@ -27,7 +27,7 @@ G_DEFINE_TYPE(ValidatedEntry, validated_entry, GTK_TYPE_BOX )
 
 static void validated_entry_finalize( GObject *self );
 
-void on_chckbtn_modify_override_toggled(GtkToggleButton *opt_switch, gpointer user_data)
+static void on_chckbtn_modify_override_toggled(GtkToggleButton *opt_switch, gpointer user_data)
 {
    ValidatedEntry *self = VALIDATED_ENTRY(user_data);
    logging_llprintf(LOGLEVEL_DEBUG, "%s", __func__);
@@ -38,7 +38,7 @@ void on_chckbtn_modify_override_toggled(GtkToggleButton *opt_switch, gpointer us
    gtk_widget_set_sensitive(GTK_WIDGET(self->entry_to_validate), mod_over);
 }
 
-void on_btn_validate_and_submit_clicked(__attribute__((unused)) GtkButton *button, gpointer user_data)
+static void on_btn_validate_and_submit_clicked(__attribute__((unused)) GtkButton *button, gpointer user_data)
 {
    logging_llprintf(LOGLEVEL_DEBUG, "%s", __func__);
 
@@ -58,7 +58,7 @@ void on_btn_validate_and_submit_clicked(__attribute__((unused)) GtkButton *butto
    }
 }
 
-void on_btn_cancel_clicked(__attribute__((unused)) GtkButton *button, gpointer user_data)
+static void on_btn_cancel_clicked(__attribute__((unused)) GtkButton *button, gpointer user_data)
 {
    logging_llprintf(LOGLEVEL_DEBUG, "%s", __func__);
 

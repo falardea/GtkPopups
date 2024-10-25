@@ -33,6 +33,11 @@ typedef struct {
    GtkWidget   *w_lbl_input_from_entry_popup;
    GtkWidget   *w_btn_screen_cleaner;
    GtkWidget   *w_btn_async_scanner;
+
+//   GtkWidget   *w_;
+   GtkWidget   *w_btn_show_password_prompt;
+   GtkWidget   *w_password_dependant_button;
+   GtkWidget   *w_password_dependant_checkbox;
 } app_widget_ref_struct;
 
 extern app_widget_ref_struct *g_app_widget_refs;

@@ -41,6 +41,10 @@ app_widget_ref_struct *app_builder(void) {
    appWidgetsT->w_lbl_input_from_entry_popup = GTK_WIDGET(gtk_builder_get_object(builder, "lbl_input_from_entry_popup"));
    bind_widgets_src_active_tar_sensitive(GTK_WIDGET(appWidgetsT->w_config_option_on_off), GTK_WIDGET(appWidgetsT->w_btn_get_config_type_bool));
 
+   appWidgetsT->w_btn_show_password_prompt = GTK_WIDGET(gtk_builder_get_object(builder, "btn_show_password_prompt"));
+   appWidgetsT->w_password_dependant_button = GTK_WIDGET(gtk_builder_get_object(builder, "password_dependant_button"));
+   appWidgetsT->w_password_dependant_checkbox = GTK_WIDGET(gtk_builder_get_object(builder, "password_dependant_checkbox"));
+
    gtk_builder_connect_signals(builder, appWidgetsT);
 
    g_object_unref(builder);

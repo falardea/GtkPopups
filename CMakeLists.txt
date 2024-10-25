@@ -92,6 +92,8 @@ set(MY_SOURCES
       src/views/composites/asynchronous_scanner.h
       src/views/composites/screen_cleaner.c
       src/views/composites/screen_cleaner.h
+      src/views/composites/validated_prompt.c
+      src/views/composites/validated_prompt.h
 )
 
 include_directories(${PROJECT_SOURCE_DIR})
